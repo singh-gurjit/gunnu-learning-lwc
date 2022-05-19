@@ -1,0 +1,27 @@
+<template>
+    <table class="slds-table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template if:true={accountsArray}>
+                <template for:each={accountsArray} for:item="account">
+                    <tr key={account.id}>
+                        <td>
+                            {account.Id}
+                        </td>
+                        <td>{account.Name}</td>
+                    </tr>
+                </template>
+            </template>
+        </tbody>
+    </table>
+
+</template>
