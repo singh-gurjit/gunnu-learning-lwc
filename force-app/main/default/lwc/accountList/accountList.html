@@ -1,27 +1,31 @@
 <template>
-    <table class="slds-table">
+    <template if:true={showContactListModal}>
+        <c-contact-list-modal contacts-array={contactsArray} onclose={handleShowHideContactList}></c-contact-list-modal>
+    </template>
+    <table class="slds-table slds-table_bordered">
         <thead>
             <tr>
                 <th>
-                    Id
+                    Name
                 </th>
                 <th>
-                    Name
+                    Phone
                 </th>
             </tr>
         </thead>
         <tbody>
             <template if:true={accountsArray}>
                 <template for:each={accountsArray} for:item="account">
-                    <tr key={account.id}>
+                    <tr key={account.Id}>
                         <td>
-                            {account.Id}
+                            <a data-id={account.Id} onclick={handleShowHideContactList}>
+                                {account.Name}
+                            </a>
                         </td>
-                        <td>{account.Name}</td>
+                        <td>{account.Phone}</td>
                     </tr>
                 </template>
             </template>
         </tbody>
     </table>
-
 </template>
