@@ -1,4 +1,10 @@
 <template>
+
+    <template if:true={showSpinner}>
+        <lightning-spinner alternative-text="Gunkaran" size="large" variant="brand">
+        </lightning-spinner>
+    </template>
+
     <template if:true={showContactListModal}>
         <c-contact-list-modal contacts-array={contactsArray} onclose={handleShowHideContactList}></c-contact-list-modal>
     </template>

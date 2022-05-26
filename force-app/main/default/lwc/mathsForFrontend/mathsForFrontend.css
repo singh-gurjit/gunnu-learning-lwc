@@ -1,0 +1,33 @@
+ * {
+     --fontSize: 5rem;
+ }
+
+ h1 {
+     font-size: var(--fontSize)
+ }
+
+ .my-button {
+     --slds-c-button-brand-color-background: orangered;
+     --slds-c-button-brand-color-background-hover: rgb(186, 50, 0);
+     --slds-c-button-brand-color-border: orangered;
+     --slds-c-button-brand-color-border-hover: rgb(186, 50, 0);
+     --slds-c-button-brand-text-color: #fff;
+ }
+
+ .my-icon {
+     --lwc-colorTextIconDefault: yellow;
+ }
+
+ .my-icon2 {
+     --sds-c-icon-color-foreground-default: purple;
+     --sds-c-icon-color-background: pink;
+ }
+
+ .my-icon3 {
+     --sds-c-icon-color-foreground: purple;
+     --sds-c-icon-color-background: pink;
+ }
+
+ .my-icon4 {
+     --sds-c-icon-color-foreground-default: yellow;
+ }
