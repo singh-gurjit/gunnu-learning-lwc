@@ -1,0 +1,9 @@
+<template>
+    <template if:true={accArray}>
+        <template for:each={accArray} for:item="acc">
+            <div key = {acc.Id} style="height: 300px">
+                <lightning-datatable data={accArray} columns={column} key-field="id"> </lightning-datatable>
+            </div>    
+        </template>
+    </template>
+</template>

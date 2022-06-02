@@ -1,0 +1,42 @@
+<template>
+    <table class="slds-table slds-table_bordered">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Phone
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template if:true={accountsArrayToDisplay}>
+                <template for:each={accountsArrayToDisplay} for:item="account">
+                    <tr key={account.Id}>
+                        <td>{account.Name}</td>
+                        <td>{account.Phone}</td>
+                    </tr>
+                </template>
+            </template>
+        </tbody>
+    </table>
+    <footer>
+        <div class="slds-grid slds-grid_align-center slds-var-p-around_small">
+            <lightning-button icon-name="utility:jump_to_left" label="First" variant="brand-outline"
+                onclick={handleFirstPage} disabled={disablePreviousButton}>
+            </lightning-button>
+            <lightning-button icon-name="utility:chevronleft" label="Previous" variant="brand-outline"
+                class="slds-var-m-horizontal_small" onclick={handlePreviousPage} disabled={disablePreviousButton}>
+            </lightning-button>
+            <p>{currentPage}/{totalPages}</p>
+            <lightning-button icon-name="utility:chevronright" icon-position="right" label="Next"
+                class="slds-var-m-horizontal_small" variant="brand-outline" onclick={handleNextPage}
+                disabled={disableNextButton}>
+            </lightning-button>
+            <lightning-button icon-name="utility:jump_to_right" icon-position="right" label="Last"
+                variant="brand-outline" onclick={handleLastPage} disabled={disableNextButton}>
+            </lightning-button>
+        </div>
+    </footer>
+</template>

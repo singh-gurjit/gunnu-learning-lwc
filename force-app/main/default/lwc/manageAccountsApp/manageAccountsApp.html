@@ -1,0 +1,12 @@
+<template>
+    <c-manage-accounts-header></c-manage-accounts-header>
+
+    <c-manage-accounts-datatable accounts-array={accountsArray}></c-manage-accounts-datatable>
+
+    <template if:true={showManageAccountsNotificationModal}>
+        <c-manage-accounts-notification-modal></c-manage-accounts-notification-modal>
+    </template>
+    <template if:true={showManageAccountsNewAccount}>
+        <c-manage-accounts-new-account></c-manage-accounts-new-account>
+    </template>
+</template>
