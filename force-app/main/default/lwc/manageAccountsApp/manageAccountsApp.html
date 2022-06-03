@@ -1,7 +1,7 @@
 <template>
-    <c-manage-accounts-header></c-manage-accounts-header>
+    <c-manage-accounts-header onsearchchange={handleSearchChange}></c-manage-accounts-header>
 
-    <c-manage-accounts-datatable accounts-array={accountsArray}></c-manage-accounts-datatable>
+    <c-manage-accounts-datatable accounts-array={accountsArrayToDisplay}></c-manage-accounts-datatable>
 
     <template if:true={showManageAccountsNotificationModal}>
         <c-manage-accounts-notification-modal></c-manage-accounts-notification-modal>
