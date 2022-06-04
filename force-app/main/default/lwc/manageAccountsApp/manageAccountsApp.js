@@ -8,6 +8,12 @@ export default class ManageAccountsApp extends LightningElement {
     @track accountsArray = []
     @track accountsArrayToDisplay = []
 
+    //@track totalRecords = this.accountsArrayToDisplay.length
+
+    get totalRecords() {
+        return this.accountsArrayToDisplay.length
+    }
+
     @wire(getAccountList)
     handleAccountList(result) {
 
@@ -24,5 +30,9 @@ export default class ManageAccountsApp extends LightningElement {
         inputValue = inputValue.toLowerCase()
         this.accountsArrayToDisplay = this.accountsArray.filter(data => data.Name.toLowerCase().includes(inputValue))
 
+    }
+
+    handleShowHideAccountModal() {
+        this.showManageAccountsNewAccount = !this.showManageAccountsNewAccount
     }
 }

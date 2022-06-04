@@ -1,12 +1,12 @@
 <template>
     <header class="slds-grid slds-grid_align-spread">
         <strong>Accounts Manager</strong>
-        <p>Total records: </p>
+        <p class="total-records">Total records: {totalRecords}</p>
         <lightning-input label="Search" variant="label-hidden" placeholder="Search accounts here" type="search"
             class="slds-col_bump-left" onchange={handleSearchChange}>
         </lightning-input>
         <lightning-button label="New" variant="brand-outline" class="slds-var-p-horizontal_small"
-            onclick={handleButtonClick}>
+            onclick={handleNewAccountModal}>
         </lightning-button>
         <lightning-button label="Delete" icon-name="utility:delete" variant="destructive" onclick={handleButtonClick}>
         </lightning-button>

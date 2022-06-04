@@ -1,5 +1,6 @@
 <template>
-    <c-manage-accounts-header onsearchchange={handleSearchChange}></c-manage-accounts-header>
+    <c-manage-accounts-header total-records={totalRecords} onsearchchange={handleSearchChange}
+        onshowaccountmodal={handleShowHideAccountModal}></c-manage-accounts-header>
 
     <c-manage-accounts-datatable accounts-array={accountsArrayToDisplay}></c-manage-accounts-datatable>
 

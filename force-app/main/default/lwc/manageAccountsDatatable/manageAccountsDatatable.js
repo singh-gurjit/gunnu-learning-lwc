@@ -5,6 +5,7 @@ var numberOfRecordToDiplay = 5
 export default class ManageAccountDatatable extends LightningElement {
 
     totalPages
+    currentPage
     @track _accountsArray
     @api get accountsArray() {
         return this._accountsArray
@@ -13,10 +14,11 @@ export default class ManageAccountDatatable extends LightningElement {
         this._accountsArray = JSON.parse(JSON.stringify(value))
         this.accountsArrayToDisplay = this._accountsArray.slice(0, numberOfRecordToDiplay)
         this.totalPages = Math.ceil(this._accountsArray.length / numberOfRecordToDiplay)
+        this.currentPage = 1
     }
     @track accountsArrayToDisplay
     showManageAccountsDatatable
-    currentPage = 1
+
 
     get disablePreviousButton() {
         return this.currentPage == 1
