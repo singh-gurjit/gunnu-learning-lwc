@@ -8,6 +8,6 @@
         <c-manage-accounts-notification-modal></c-manage-accounts-notification-modal>
     </template>
     <template if:true={showManageAccountsNewAccount}>
-        <c-manage-accounts-new-account></c-manage-accounts-new-account>
+        <c-manage-accounts-new-account onclose={handleShowHideAccountModal}></c-manage-accounts-new-account>
     </template>
 </template>

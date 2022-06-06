@@ -53,7 +53,3 @@ export default class ManageAccountDatatable extends LightningElement {
         this.accountsArrayToDisplay = this.accountsArray.slice(startPoint, endPoint)
     }
 }
-
-
-
-
